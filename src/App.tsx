@@ -1,7 +1,6 @@
 import React,{useState,useEffect} from 'react'; 
-import './App.css';
 import axios from 'axios' //Biblioteca para solicitar peticion http
-import TableCoins from './Components/TableCoins';
+import CryptoGrid from './Components/CryptoGrid';
 
 
 function App() {
@@ -23,12 +22,15 @@ function App() {
   
 
   return (
-    <div className="container">
-      <div className='row'>
-        <div className='tittle'>COIN MARKET</div>
-        <input type='text' placeholder='Search a Coin' className='form-control bg-dark text-light border-0 mt-4 text-center' onChange={e => setSearch(e.target.value)} />
-        <TableCoins coins={coins} search={search}/>
-      </div>
+    <div className="App">
+      <input 
+        type="text" 
+        placeholder="Search" 
+        value={search} 
+        onChange={(e) => setSearch(e.target.value)} 
+        className="form-control mt-3"
+      />
+      <CryptoGrid coins={coins} search={search} />
     </div>
   );
 }
