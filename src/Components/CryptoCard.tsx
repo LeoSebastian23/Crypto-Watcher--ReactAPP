@@ -1,5 +1,4 @@
 import React from "react";
-
 interface CryptoCardProps {
   coin: {
     image: string;
@@ -22,27 +21,22 @@ const CryptoCard: React.FC<CryptoCardProps> = ({ coin, index }) => {
   return (
     <div
       className="card mb-3 p-2 text-bg-dark crypto-card"
-      style={{ width: "18rem", backgroundColor: "#f8f9fa", color: "#343a40" }}
+      style={{ width: "18rem", color: "#343a40" }}
     >
-      <div className="d-flex justify-content-between align-items-center">
+      <div className="d-flex justify-center align-items-center">
         <img
           src={coin.image}
           className="card-img-top"
           alt={coin.name}
           style={{ width: "50px" }}
         />
-        <div className="d-flex flex-column">
-          <button className="btn btn-outline-secondary btn-sm mb-1">
-            Ver
-          </button>
-          <button className="btn btn-outline-secondary btn-sm">Action 2</button>
-        </div>
+         <h5 className="card-title p-2">
+          {coin.name}
+          <span className="text-muted text-uppercase p-2">({coin.symbol})</span>
+        </h5>
       </div>
       <div className="card-body">
-        <h5 className="card-title">
-          {coin.name}
-          <span className="text-muted text-uppercase">({coin.symbol})</span>
-        </h5>
+
         <div className="d-flex justify-content-between align-items-center">
           <p className="fw-semibold mb-0">
             ${formatPrice(coin.current_price)}

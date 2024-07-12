@@ -1,0 +1,8 @@
+.crypto-card {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.crypto-card:hover {
+  background-color: #969696 !important;
+  transform: translateY(-5px);
+}

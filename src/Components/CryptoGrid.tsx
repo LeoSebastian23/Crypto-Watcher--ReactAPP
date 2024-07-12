@@ -20,15 +20,15 @@ const CryptoGrid: React.FC<CryptoGridProps> = ({ coins, search }) => {
   );
 
   return (
-    <div className="container mt-3">
-    <div className="row">
-      {filteredCoins.map((coin, index) => (
-        <div className="col-md-4" key={index}>
-          <CryptoCard coin={coin} index={index + 1} />
-        </div>
-      ))}
+    <div className="container mt-4">
+      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
+        {filteredCoins.map((coin, index) => (
+          <div key={index} className="col mb-4 d-flex justify-content-center">
+            <CryptoCard coin={coin} index={index + 1} />
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
   );
 };
 

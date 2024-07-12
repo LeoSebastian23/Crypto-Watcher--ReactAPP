@@ -1,6 +1,8 @@
 import React,{useState,useEffect} from 'react'; 
 import axios from 'axios' //Biblioteca para solicitar peticion http
 import CryptoGrid from './Components/CryptoGrid';
+import SearchInput from './Components/SearchInput';
+import AppTitle from './Components/AppTittle';
 
 
 function App() {
@@ -22,14 +24,9 @@ function App() {
   
 
   return (
-    <div className="App">
-      <input 
-        type="text" 
-        placeholder="Search" 
-        value={search} 
-        onChange={(e) => setSearch(e.target.value)} 
-        className="form-control mt-3"
-      />
+    <div className="App container mt-4">
+      <AppTitle/>
+      <SearchInput search={search} setSearch={setSearch} />
       <CryptoGrid coins={coins} search={search} />
     </div>
   );
