@@ -5,7 +5,7 @@ const AppTitle: React.FC = () => {
           <div
             className="p-1 text-center text-white"
           >
-            <h1 className="fw-bold">Bitcoin Watcher</h1>
+            <h1 className="fw-bold">Crypto Watcher</h1>
             <p className="fs-5">Manténgase a la vanguardia de las tendencias criptográficas</p>
           </div>
       );
