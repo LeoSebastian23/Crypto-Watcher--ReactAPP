@@ -9,6 +9,7 @@ interface CryptoGridProps {
     price_change_percentage_24h: number;
     current_price: number;
     total_volume: number;
+    price_history?: number[];
   }[];
   search: string;
 }
